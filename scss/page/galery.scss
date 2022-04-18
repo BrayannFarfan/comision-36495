@@ -1,0 +1,81 @@
+.gallery{
+    margin-top: 60rem;
+    .row{
+        .col{
+            .gallery-wrap{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                column-gap: 2rem;
+                row-gap: 2rem;
+                .item{
+                    overflow: hidden;
+                    display: grid;
+                    &:nth-child(3){
+                        position: relative;
+                        top: -30rem;
+                    }
+                    &:nth-child(5){
+                        position: relative;
+                        top: -30rem;
+                    }
+                    &:nth-child(7){
+                        position: relative;
+                        top: -30rem;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                    .gallery-infowrap{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2rem;
+                        h3{
+                            font-size: 3rem;
+                            text-transform: uppercase;
+                        }
+                        p{
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px){
+    .gallery{
+        margin-top: 100rem;
+        .row{
+            .col{
+                .gallery-wrap{
+                    grid-template-columns: 1fr;
+                    .item{
+                        overflow: hidden;
+                        display: grid;
+                        &:nth-child(3){
+                            position: relative;
+                            top: 0rem;
+                        }
+                        &:nth-child(5){
+                            position: relative;
+                            top: 0rem;
+                        }
+                        &:nth-child(7){
+                            position: relative;
+                            top: 0rem;
+                        }
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px){
+    .gallery{
+        margin-top: 90rem;
+    }
+}
