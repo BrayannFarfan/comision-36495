@@ -10,6 +10,81 @@
 a:hover {
   cursor: pointer; }
 
+.header {
+  background: #333;
+  background-image: url(../image/header.jpg);
+  background-position: center;
+  height: 70vh;
+  position: relative; }
+  .header::before {
+    content: "";
+    position: absolute;
+    background-color: #3131315a;
+    height: 70vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .header__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px; }
+    .header__container .header__image {
+      width: 150px; }
+      .header__container .header__image .image {
+        width: 100%; }
+    .header__container .nav {
+      z-index: 1; }
+      .header__container .nav__menu {
+        display: flex; }
+        .header__container .nav__menu .nav__items .nav__links {
+          color: aliceblue;
+          padding: 15px;
+          text-transform: uppercase;
+          font-size: .8rem;
+          text-decoration: none; }
+          .header__container .nav__menu .nav__items .nav__links:hover {
+            color: yellow; }
+  .header .publicity {
+    color: #fff;
+    width: 80%;
+    margin: auto;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem; }
+    .header .publicity__container {
+      z-index: 1000; }
+      .header .publicity__container p {
+        font-size: 1rem;
+        font-weight: 400; }
+      .header .publicity__container h1 {
+        font-size: 4rem; }
+      .header .publicity__container h2 {
+        color: yellow; }
+      .header .publicity__container a {
+        padding: 15px;
+        border: 1px solid yellow;
+        color: #fff;
+        top: 2rem;
+        position: relative;
+        text-decoration: none; }
+        .header .publicity__container a:hover {
+          background-color: yellow;
+          color: #333; }
+
+@media (max-width: 800px) {
+  .nav__items {
+    display: none; }
+  .header__container {
+    justify-content: space-between; } }
+
+@media (max-width: 400px) {
+  .header .publicity__container h1 {
+    font-size: 2rem; } }
+
 .about__item {
   display: flex;
   align-items: center;
